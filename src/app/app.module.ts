@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { CourseModule } from './course/course.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ShairedModule } from './shaired/shaired.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ShairedModule } from './shaired/shaired.module';
     DashboardModule,
     CoreModule,
     ShairedModule,
-    CourseModule
+    CourseModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
