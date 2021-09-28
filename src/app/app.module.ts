@@ -9,6 +9,7 @@ import { CourseModule } from './course/course.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ShairedModule } from './shaired/shaired.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     CoreModule,
     ShairedModule,
     CourseModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    NgHttpLoaderModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

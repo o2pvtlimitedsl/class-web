@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DasahboardService } from '../dasahboard.service';
 
 @Component({
   selector: 'app-course-wrapper',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseWrapperComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dasahboardService: DasahboardService) { }
 
   ngOnInit(): void {
+    
+    // this.dasahboardService.getList().subscribe((res: any) => {
+    //   console.log(res, "Success")
+    // }, err => {
+    //   console.log(err, "Success")
+    // })
   }
 
 }

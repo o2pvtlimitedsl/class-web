@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CourseWrapperComponent } from './course-wrapper/course-wrapper.component';
 import { CourseComponent } from './course/course.component';
 import { CoreModule } from '../core/core.module';
+import { DasahboardService } from './dasahboard.service';
 
 
 @NgModule({
@@ -18,6 +19,9 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     DashboardRoutingModule,
     CoreModule
+  ],
+  providers: [
+    DasahboardService
   ]
 })
 export class DashboardModule { }
