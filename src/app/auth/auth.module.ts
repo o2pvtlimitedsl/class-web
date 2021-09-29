@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AngularMaterialModule } from '../core/angular-material.module';
 import { CoreModule } from '../core/core.module';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
@@ -21,7 +23,10 @@ import { RegisterComponent } from './register/register.component';
     CommonModule,
     AuthRoutingModule,
     CoreModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    AngularMaterialModule
   ],
   providers: [
     AuthService
