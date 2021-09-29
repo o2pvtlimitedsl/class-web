@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  public switch = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  switchOption(): void{
+    this.switch = !this.switch;
   }
 
 }
