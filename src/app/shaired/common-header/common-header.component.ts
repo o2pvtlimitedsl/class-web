@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  selector: 'app-common-header',
+  templateUrl: './common-header.component.html',
+  styleUrls: ['./common-header.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class CommonHeaderComponent implements OnInit {
+  @Input() isAuth?: boolean;
+  @Output() switchAuth = new EventEmitter<string>();
+
   public switch = true;
 
   constructor(private router: Router) { }
@@ -14,7 +17,7 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  switchOption(type: string): void {
+  switchOption(type: string): void{
     switch (type) {
       case 'L':
         this.switch = true;

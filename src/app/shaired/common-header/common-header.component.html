@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" class="app-header">
+    <div><a class="positronx">Learn Physics</a></div>
+    <span class="nav-tool-items" *ngIf="isAuth">
+        <a mat-button [class.mat-raised-button]="switch" routerLinkActive="active"
+            (click)="switchOption('L')">Log in</a>
+        <a mat-button [class.mat-raised-button]="!switch" routerLinkActive="active"
+            (click)="switchOption('R')">Register</a>
+    </span>
+</mat-toolbar>
